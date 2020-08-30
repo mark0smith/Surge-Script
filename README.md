@@ -2,11 +2,11 @@
 ### Install Module
 #### BiliBili
 ```
-https://raw.githubusercontent.com/marks0mith/Surge-Script/master/module/bilibili.sgmodule
+https://raw.githubusercontent.com/mark0smith/Surge-Script/master/module/bilibili.sgmodule
 ```
 #### ZhiHu
 ```
-https://raw.githubusercontent.com/marks0mith/Surge-Script/master/module/zhihu.sgmodule
+https://raw.githubusercontent.com/mark0smith/Surge-Script/master/module/zhihu.sgmodule
 ```
 ## Modification
 
