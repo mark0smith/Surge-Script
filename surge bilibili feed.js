@@ -7,7 +7,7 @@ function should_filter(element) {
 	if ("three_point" in element) {
 		if ('dislike_reasons' in element['three_point']) {
 			if (element['three_point']['dislike_reasons'].length == 1) {
-				return (true, "广告/推广");
+				return [true, "广告/推广"];
 			}
 		}
 	}
@@ -15,12 +15,12 @@ function should_filter(element) {
 	// 屏蔽直播 	
 	if ("card_goto" in element) {
 		if (element['card_goto'] == 'live'){
-			return (true, "直播");
+			return [true, "直播"];
 		}
 	}
 	if ("goto" in element) {
 		if (element['goto'] == 'live'){
-			return (true, "直播");
+			return [true, "直播"];
 		}
 	}
 
@@ -28,11 +28,11 @@ function should_filter(element) {
 	if ("player_args" in element) {
 		if ("duration" in element["player_args"]) {
 			if (element['player_args']['duration'] < 60) {
-				return (true, "短视频");
+				return [true, "短视频"];
 			}
 		}
 	}
-	return (false,"");
+	return [false,""];
 }
 var new_array = [];
 body["data"]["items"].forEach((element, index) => {
