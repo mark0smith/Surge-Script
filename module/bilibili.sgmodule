@@ -10,4 +10,4 @@ URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
 hostname = %APPEND% api.bilibili.com, app.bilibili.com, api.live.bilibili.com
 
 [Script]
-bilibili feed = type=http-response,requires-body=1,max-size=0,pattern=https://app.bilibili.com/x/v2/feed/index\?access_key,script-path=https://github.com/mark0smith/Surge-Script/raw/dev/surge%20bilibili%20feed.js
+bilibili feed = type=http-response,requires-body=true, max-size=0,pattern=https://app.bilibili.com/x/v2/feed/index\?access_key,script-path=https://github.com/mark0smith/Surge-Script/raw/dev/surge%20bilibili%20feed.js
