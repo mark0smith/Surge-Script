@@ -1,5 +1,5 @@
-let body = $response.body
-body=JSON.parse(body)
+var original_body = $response.body;
+body=JSON.parse(original_body);
 
 function should_filter(element) {
     // 不喜欢原因数量为1个时，判断为广告或者推广，进行屏蔽
