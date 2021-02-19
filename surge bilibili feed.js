@@ -11,7 +11,13 @@ function should_filter(element) {
 			}
 		}
 	}
-
+	
+	// 屏蔽直播 	
+	if ("card_goto" in element) {
+		if (element['card_goto'] == 'live'){
+			return true;
+		}
+	}
 
 	// 播放参数信息中视频时长小于1分钟的短视频，进行屏蔽
 	if ("player_args" in element) {
