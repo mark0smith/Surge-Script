@@ -1,10 +1,15 @@
-var original_body = $response.body;
-body=JSON.parse(original_body);
+var body = $response.body;
+body=JSON.parse(body);
 
 function should_filter(element) {
     // 不喜欢原因数量为1个时，判断为广告或者推广，进行屏蔽
-    if(element['three_point']['dislike_reasons'].length == 1){
-        return true;
+
+    if("three_point" in element){
+        if( 'dislike_reasons' in element['three_point'] ){
+            if(element['three_point']['dislike_reasons'].length == 1){
+        	return true;
+	    }
+        }
     }
 
     // 没有播放参数信息，或者视频时长小于1分钟的短视频，进行屏蔽
