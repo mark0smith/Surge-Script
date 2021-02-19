@@ -15,9 +15,11 @@ function should_filter(element) {
     // 没有播放参数信息，或者视频时长小于1分钟的短视频，进行屏蔽
     if(! "player_args" in element){
         return true;
-    }else if( ! "duration" in element["player_args"] ){
+    }
+	if( ! "duration" in element["player_args"] ){
         return true;
-    }else if( element['player_args']['duration'] < 60 ){
+    }
+	if( element['player_args']['duration'] < 60 ){
         return true;
     }
 
