@@ -17,6 +17,18 @@ function should_filter(element) {
 		}
 	}
 	
+	//屏蔽文章
+	if ("card_goto" in element) {
+		if (element['card_goto'] == 'article_s'){
+			return [true, "文章"];
+		}
+	}
+	if ("goto" in element) {
+		if (element['goto'] == 'article'){
+			return [true, "文章"];
+		}
+	}
+	
 	// 屏蔽直播 	
 	if ("card_goto" in element) {
 		if (element['card_goto'] == 'live'){
