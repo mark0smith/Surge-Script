@@ -3,7 +3,7 @@ body=JSON.parse(body);
 console.log(`原始响应内容数量： ${body["data"]["items"].length}`);
 
 // 屏蔽不喜欢的UP主
-var blocked_up_list = ["游戏BBQ","拜托了小翔哥","电竞方头人Riot"];
+var blocked_up_list = ["游戏BBQ","拜托了小翔哥","电竞方头人Riot","小潮院长","马哥巨离谱","宝剑嫂"];
 // 最短播放时间为5分钟；
 var duration_threshold = 5 * 60; 
 
