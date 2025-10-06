@@ -714,6 +714,7 @@ function Env(t, e) { class s { constructor(t) { this.env = t } send(t, e = "GET"
 var body = $response.body;
 var url = $request.url;
 let method = getModifyMethod(url);
+log("%s -> %s", url, method);
 if (method) {
 	log(method);
 	var func = eval(method);
