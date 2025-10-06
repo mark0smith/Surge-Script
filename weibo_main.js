@@ -123,6 +123,7 @@ function isAd(data) {
 	if (data.is_ad_card && data.is_ad_card == 1) { return true };
 	if (data.promotion && data.promotion.type == 'ad') { return true };
 	if (data.data.adType && data.data.adType == "广告") { return true };
+	if (data.adType && data.adType == "荐读") { return true };
 	return false;
 }
 
