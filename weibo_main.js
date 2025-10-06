@@ -76,6 +76,8 @@ const otherUrls = {
 	'/checkin/show': 'removeCheckin',					//签到任务
 	'/live/media_homelist': 'removeMediaHomelist',		//首页直播
 	'/comments/build_comments': 'removeComments',		//微博详情页评论区相关内容
+	'/statuses/container_detail_comment': 'removeComments',
+	'/statuses/container_detail': 'removeComments',
 	'/container/get_item': 'containerHandler',			//列表相关
 	'/profile/container_timeline': 'userHandler',					//用户主页
 	'/video/tiny_stream_video_list': 'nextVideoHandler',	//取消自动播放下一个视频
